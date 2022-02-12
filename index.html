@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Играю на сф</title>
+	<style type="text/css"></style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="start">
+	<h1>Игра Эээ название чёт не придумал</h1>
+	<button class="btn1">Попробовать!</button>
+</div>
+
+<div class="play">
+	<h1>ЗДЕСЬ тебе требуется найти Нормального человечка</h1>
+	<button class="btn2">Крутите барабан</button>
+	<p>Осталось <span class="text1" style="font-size: 25px; font: bold;">5</span> попитки</p>
+	<div class="box1"></div> 
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="box6"></div>
+	<div class="box7"></div>
+	<div class="box8"></div>
+</div>
+
+
+<div class="loseWindow" href="#" onclick="location.reload();">
+	<h1 style="padding-top: 10%;">Wake the fuck Up Samurai, we have a city to burn</h1>
+	<p>жми уже быстрее, Samurai</p>
+</div>
+<div class="gay">
+	<h1 >Ты победил, но я ещё не сделал резульатата. Так что перепроходи едрить bruh</h1>
+</div>
+
+<script type="text/javascript">
+	let attempts = 5
+document.querySelector('.btn2').onclick = function() {
+	//картинки стали кликабельными
+	document.querySelector('.box1').style.pointerEvents = "auto"
+	document.querySelector('.box2').style.pointerEvents = "auto"
+	document.querySelector('.box3').style.pointerEvents = "auto"
+	document.querySelector('.box4').style.pointerEvents = "auto"
+	document.querySelector('.box5').style.pointerEvents = "auto"
+	document.querySelector('.box6').style.pointerEvents = "auto"
+	document.querySelector('.box7').style.pointerEvents = "auto"
+	document.querySelector('.box8').style.pointerEvents = "auto"
+	//черножопый
+	document.querySelector('.box1').style.background = "black"
+	document.querySelector('.box2').style.background = "black"
+	document.querySelector('.box3').style.background = "black"
+	document.querySelector('.box4').style.background = "black"
+	document.querySelector('.box5').style.background = "black"
+	document.querySelector('.box6').style.background = "black"
+	document.querySelector('.box7').style.background = "black"
+	document.querySelector('.box8').style.background = "black"
+	//кнопка прощай
+	document.querySelector('.btn2').style.opacity = "0.2"
+	document.querySelector('.btn2').style.border = "0px"
+	document.querySelector('.btn2').disabled = "disabled"
+	//1 и 3 меняются
+	document.querySelector('.box1').style.left = "55%"
+	document.querySelector('.box3').style.left = "5%"
+
+	//2 и 6 меняются	
+	document.querySelector('.box2').style.left = "30%"
+	document.querySelector('.box2').style.top = "65%"
+	document.querySelector('.box6').style.left = "30%"
+	document.querySelector('.box6').style.top = "35%"
+	 
+	//4 и 5 меняются
+	document.querySelector('.box4').style.left = "5%"
+	document.querySelector('.box4').style.top = "65%"
+	document.querySelector('.box5').style.left = "80%"
+	document.querySelector('.box5').style.top = "35%"
+
+	//7 и 8 меняются
+	document.querySelector('.box7').style.left = "80%"
+	document.querySelector('.box8').style.left = "55%"
+}
+
+document.querySelector('.btn1').onclick = function() {
+	document.querySelector('.play').style.display = "block"
+	document.querySelector('.start').style.display = "none"
+}
+
+//LOSE
+document.querySelector('.box1').onclick = function() {
+	attempts = attempts - 1  
+	document.querySelector('.box1').style.backgroundImage = "url(котоо.jpg)"
+	document.querySelector('.box1').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+}
+
+//LOSE
+document.querySelector('.box2').onclick = function() {
+	attempts = attempts - 1 
+	document.querySelector('.box2').style.backgroundImage = "url(unknown.png)"
+	document.querySelector('.box2').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+	if (attempts==0) {
+		document.querySelector('.loseWindow').style.display = "block"
+	}
+}
+
+//LOSE
+document.querySelector('.box3').onclick = function() {
+	attempts = attempts - 1 
+	document.querySelector('.box3').style.backgroundImage = "url(uwu.jpg)"
+	document.querySelector('.box3').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+	if (attempts==0) {
+		document.querySelector('.loseWindow').style.display = "block"
+	}
+}
+
+//WIN
+document.querySelector('.box4').onclick = function() {
+	alert("ёмае, ты что СПРАВИЛСЯ!!??!?!?!?")
+	document.querySelector('.gay').style.display = "block"
+	document.querySelector('.play').style.display = "none"
+
+}
+
+//LOSE
+document.querySelector('.box5').onclick = function() {
+	attempts = attempts - 1 
+	document.querySelector('.box5').style.backgroundImage = "url(Кот.jpg)"
+	document.querySelector('.box5').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+	if (attempts==0) {
+		document.querySelector('.loseWindow').style.display = "block"
+		
+	}
+}
+
+//LOSE
+document.querySelector('.box6').onclick = function() {
+	attempts = attempts - 1 
+	document.querySelector('.box6').style.backgroundImage = "url(кот.png)"
+	document.querySelector('.box6').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+	if (attempts==0) {
+		document.querySelector('.loseWindow').style.display = "block"
+	}
+}
+
+//LOSE
+document.querySelector('.box7').onclick = function() {
+	attempts = attempts - 1 
+	document.querySelector('.box7').style.backgroundImage = "(котяра.png)"
+	document.querySelector('.box7').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+	if (attempts==0) {
+		document.querySelector('.loseWindow').style.display = "block"
+	}
+}
+
+//LOSE
+document.querySelector('.box8').onclick = function() {
+	attempts = attempts - 1 
+	document.querySelector('.box8').style.backgroundImage = "url(шлепа.jpg)"
+	document.querySelector('.box8').style.backgroundSize = "100%"
+	document.querySelector('.text1').innerHTML = attempts
+	if (attempts==0) {
+		document.querySelector('.loseWindow').style.display = "block"
+	}
+}
+
+</script>
+</body>
+</html>
